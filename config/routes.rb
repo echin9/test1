@@ -4,5 +4,8 @@ ActionController::Routing::Routes.draw do |map|
   map.help    '/help',    :controller => 'pages', :action => 'help'
   
   map.root :controller => 'pages', :action => 'home'
+  
+  map.connect ':controller/:action/:id'
+  map.connect ':controller/:action/:id.:format'
 end
 
